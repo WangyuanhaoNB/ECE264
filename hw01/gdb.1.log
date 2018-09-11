@@ -1,0 +1,168 @@
+Starting program: /home/shay/a/wang3087/264/hw01/prime_factor 
+
+Program received signal SIGINT, Interrupt.
+0x0000003e1a2716f3 in _IO_new_file_xsputn () from /lib64/libc.so.6
+#0  0x0000003e1a2716f3 in _IO_new_file_xsputn () from /lib64/libc.so.6
+#1  0x0000003e1a245018 in vfprintf () from /lib64/libc.so.6
+#2  0x0000003e1a24effa in printf () from /lib64/libc.so.6
+#3  0x0000000000400658 in print_prime_factors (n=0) at prime_factor.c:29
+#4  0x00000000004006f7 in main (argc=1, argv=0x7fffffffe3c8) at test_prime_factor.c:7
+#3  0x0000000000400658 in print_prime_factors (n=0) at prime_factor.c:29
+29	                printf(" %d", 2);
+24	            printf(" (none)");
+25	        }
+26	        else {
+27	            // Print all occurrences of 2 in the prime factorization
+28	            while(n % 2 == 0) {
+29	                printf(" %d", 2);
+30	                n %= 2;  // Divide n by 2 (integer division)
+31	            }
+32	
+33	            // Try all odd integers, from 3 to sqrt(n)
+$1 = 0
+No symbol "none" in current context.
+No locals.
+n = 0
+Breakpoint 1 at 0x4006ed: file test_prime_factor.c, line 7.
+Starting program: /home/shay/a/wang3087/264/hw01/prime_factor 
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe3c8) at test_prime_factor.c:7
+7		print_prime_factors(6);
+"save" must be followed by the name of a save subcommand.
+List of save subcommands:
+
+save breakpoints -- Save current breakpoint definitions as a script
+save gdb-index -- Save a gdb-index file
+save tracepoints -- Save current tracepoint definitions as a script
+
+Type "help save" followed by save subcommand name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+
+Program received signal SIGINT, Interrupt.
+0x0000003e1a244250 in vfprintf () from /lib64/libc.so.6
+Single stepping until exit from function vfprintf,
+which has no line number information.
+0x0000003e1a24effa in printf () from /lib64/libc.so.6
+No source file specified.
+Not confirmed.
+Starting program:  
+No executable file specified.
+Use the "file" or "exec-file" command.
+Starting program:  
+No executable file specified.
+Use the "file" or "exec-file" command.
+Starting program:  prime_factor
+No executable file specified.
+Use the "file" or "exec-file" command.
+Starting program: /home/shay/a/wang3087/264/hw01/prime_factor 
+
+Program received signal SIGINT, Interrupt.
+0x0000003e1a24400d in vfprintf () from /lib64/libc.so.6
+#0  0x0000003e1a24400d in vfprintf () from /lib64/libc.so.6
+#1  0x0000003e1a24effa in printf () from /lib64/libc.so.6
+#2  0x0000000000400658 in print_prime_factors (n=0) at prime_factor.c:29
+#3  0x00000000004006f7 in main (argc=1, argv=0x7fffffffe3c8) at test_prime_factor.c:7
+#0  0x0000000000000000 in ?? ()
+#2  0x0000000000400658 in print_prime_factors (n=0) at prime_factor.c:29
+29	                printf(" %d", 2);
+24	            printf(" (none)");
+25	        }
+26	        else {
+27	            // Print all occurrences of 2 in the prime factorization
+28	            while(n % 2 == 0) {
+29	                printf(" %d", 2);
+30	                n %= 2;  // Divide n by 2 (integer division)
+31	            }
+32	
+33	            // Try all odd integers, from 3 to sqrt(n)
+No locals.
+n = 0
+Breakpoint 1 at 0x4006ed: file test_prime_factor.c, line 7.
+Starting program: /home/shay/a/wang3087/264/hw01/prime_factor 
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe3c8) at test_prime_factor.c:7
+7		print_prime_factors(6);
+
+Program received signal SIGINT, Interrupt.
+0x0000003e1a2db7d0 in __write_nocancel () from /lib64/libc.so.6
+Single stepping until exit from function __write_nocancel,
+which has no line number information.
+0x0000003e1a271943 in _IO_new_file_write () from /lib64/libc.so.6
+Starting program: /home/shay/a/wang3087/264/hw01/prime_factor 
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe3c8) at test_prime_factor.c:7
+7		print_prime_factors(6);
+print_prime_factors (n=6) at prime_factor.c:17
+17	    if(n <= 0) {
+12	|*           This is about finding bugs.             *|
+13	|*                                                   *|
+14	\*****************************************************/
+15	
+16	void print_prime_factors(int n) {
+17	    if(n <= 0) {
+18	        printf("Only positive numbers are supported.\n");
+19	    }
+20	    else {
+21	        printf("Prime factors of %d:", n);
+22	
+23	        if(n == 1) {
+24	            printf(" (none)");
+25	        }
+26	        else {
+27	            // Print all occurrences of 2 in the prime factorization
+28	            while(n % 2 == 0) {
+29	                printf(" %d", 2);
+30	                n %= 2;  // Divide n by 2 (integer division)
+31	            }
+Breakpoint 2 at 0x400669: file prime_factor.c, line 28.
+Continuing.
+
+Breakpoint 2, print_prime_factors (n=6) at prime_factor.c:28
+28	            while(n % 2 == 0) {
+The history is empty.
+$1 = 6
+$2 = 6
+29	                printf(" %d", 2);
+$3 = 6
+Starting program: /home/shay/a/wang3087/264/hw01/prime_factor 
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe3c8) at test_prime_factor.c:7
+7		print_prime_factors(6);
+print_prime_factors (n=6) at prime_factor.c:17
+17	    if(n <= 0) {
+12	|*           This is about finding bugs.             *|
+13	|*                                                   *|
+14	\*****************************************************/
+15	
+16	void print_prime_factors(int n) {
+17	    if(n <= 0) {
+18	        printf("Only positive numbers are supported.\n");
+19	    }
+20	    else {
+21	        printf("Prime factors of %d:", n);
+22	
+23	        if(n == 1) {
+24	            printf(" (none)");
+25	        }
+26	        else {
+27	            // Print all occurrences of 2 in the prime factorization
+28	            while(n % 2 == 0) {
+29	                printf(" %d", 2);
+30	                n %= 2;  // Divide n by 2 (integer division)
+31	            }
+Note: breakpoint 2 also set at pc 0x400669.
+Breakpoint 3 at 0x400669: file prime_factor.c, line 28.
+Continuing.
+
+Breakpoint 2, print_prime_factors (n=6) at prime_factor.c:28
+28	            while(n % 2 == 0) {
+$4 = 6
+29	                printf(" %d", 2);
+$5 = 6
+30	                n %= 2;  // Divide n by 2 (integer division)
+$6 = 6
+
+Breakpoint 2, print_prime_factors (n=0) at prime_factor.c:28
+28	            while(n % 2 == 0) {
+$7 = 0

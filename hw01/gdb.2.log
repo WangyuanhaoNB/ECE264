@@ -1,0 +1,116 @@
+Breakpoint 1 at 0x400601: file prime_factor.c, line 17.
+Starting program: /home/shay/a/wang3087/264/hw01/prime_factor 
+
+Breakpoint 1, print_prime_factors (n=6) at prime_factor.c:17
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=1) at prime_factor.c:17
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=0) at prime_factor.c:17
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=48) at prime_factor.c:17
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=49) at prime_factor.c:17
+17	    if(n <= 0) {
+21	        printf("Prime factors of %d:", n);
+Execute until the program reaches a source line greater than the current
+or a specified location (same args as break command) within the current frame.
+main (argc=1, argv=0x7fffffffe3c8) at test_prime_factor.c:12
+12		print_prime_factors(74); // 2 37
+No line 34 in the current file.
+No line 17 in the current file.
+
+Breakpoint 1, print_prime_factors (n=74) at prime_factor.c:17
+17	    if(n <= 0) {
+21	        printf("Prime factors of %d:", n);
+23	        if(n == 1) {
+28	            while(n % 2 == 0) {
+29	                printf(" %d", 2);
+Breakpoint 1 at 0x400601: file prime_factor.c, line 17.
+Starting program: /home/shay/a/wang3087/264/hw01/prime_factor 
+
+Breakpoint 1, print_prime_factors (n=6) at prime_factor.c:17
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=1) at prime_factor.c:17
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=0) at prime_factor.c:17
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=48) at prime_factor.c:17
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=49) at prime_factor.c:17
+17	    if(n <= 0) {
+21	        printf("Prime factors of %d:", n);
+#0  print_prime_factors (n=49) at prime_factor.c:21
+21	        printf("Prime factors of %d:", n);
+23	        if(n == 1) {
+Function "n=34" not defined.
+Execute until the program reaches a source line greater than the current
+or a specified location (same args as break command) within the current frame.
+No line 0 in the current file.
+main (argc=1, argv=0x7fffffffe3c8) at test_prime_factor.c:12
+12		print_prime_factors(74); // 2 37
+
+Breakpoint 1, print_prime_factors (n=74) at prime_factor.c:17
+17	    if(n <= 0) {
+main (argc=1, argv=0x7fffffffe3c8) at test_prime_factor.c:14
+14		return EXIT_SUCCESS;
+0x0000003e1a21ed1d in __libc_start_main () from /lib64/libc.so.6
+[Inferior 1 (process 28436) exited normally]
+The program is not being run.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+Breakpoint 1 at 0x400601: file prime_factor.c, line 17.
+Note: breakpoint 1 (disabled) also set at pc 0x400601.
+Breakpoint 2 at 0x400601: file prime_factor.c, line 16.
+Note: breakpoints 1 (disabled) and 2 (disabled) also set at pc 0x400601.
+Breakpoint 3 at 0x400601: file prime_factor.c, line 17.
+Function "print_prime_factors 17" not defined.
+Function "print_prime_factors(17)" not defined.
+No line 17 in the current file.
+No source file named print_prime_factors.c.
+No source file named prime_factors.c.
+Note: breakpoints 1 (disabled), 2 (disabled) and 3 (disabled) also set at pc 0x400601.
+Breakpoint 4 at 0x400601: file prime_factor.c, line 17.
+Breakpoint 1 at 0x400601: file prime_factor.c, line 17.
+Starting program: /home/shay/a/wang3087/264/hw01/prime_factor 
+
+Breakpoint 1, print_prime_factors (n=6) at prime_factor.c:17
+warning: Source file is more recent than executable.
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=1) at prime_factor.c:17
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=0) at prime_factor.c:17
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=48) at prime_factor.c:17
+17	    if(n <= 0) {
+Continuing.
+
+Breakpoint 1, print_prime_factors (n=49) at prime_factor.c:17
+17	    if(n <= 0) {
+21	        printf("Prime factors of %d:", n);
+Execute until the program reaches a source line greater than the current
+or a specified location (same args as break command) within the current frame.
+print_prime_factors (n=49) at prime_factor.c:34
+34	            for(int i = 3; i * i < n; i += 2) {

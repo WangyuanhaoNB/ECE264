@@ -1,0 +1,79 @@
+set logging file gdb.2.log
+set logging on
+set history filename gdb.2.history
+set history save
+break prime_factor.c:17
+run
+continue
+continue
+continue
+continue
+until
+help until
+until 1
+until 34
+until 17
+until
+until
+until
+until
+step
+quit
+set logging file gdb.2.log
+set logging on
+set history filename gdb.2.history
+set history save
+break prime_factor.c:17
+run
+continue
+continue
+continue
+continue
+until
+frame 0
+until
+until n=34
+help until
+until 0
+until 1
+until 2
+until 3
+until 4
+until 5
+until 6
+ until 7
+disable 1
+until
+until 0
+quit
+set logging file gdb.2.log
+set logging on
+set history filename gdb.2.history
+set history save
+break prime_factor.c:17
+disable 1
+break prime_factor.c:16
+disable 2
+break print_prime_factors
+disable 3
+break print_prime_factors 17
+break print_prime_factors(17)
+break 17
+break print_prime_factors.c:17
+break prime_factors.c:17
+break prime_factor.c:17
+quit
+set logging file gdb.2.log
+set logging on
+set history filename gdb.2.history
+set history save
+break prime_factor.c:17
+run
+c
+c
+c
+c
+until
+help until
+until prime_factor.c:34
+quit
