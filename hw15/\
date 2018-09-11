@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "bmp.h"
+
+int main(int argc,char* argv[])
+{
+	FILE* fptr = fopen("6x6_24bit.bmp","r");
+	char* error = NULL;
+	if(fptr == NULL)
+	{
+		printf("File does not exist!\n");
+		return EXIT_FAILURE;
+	}
+	BMPImage* image = read_bmp(fptr,&error);
+	if(error != NULL)
+	{
+		printf("%s",error);
+		free(error);
+	}
+	fclose(fptr);
+
+	fptr = fopen("output_file.bmp","w+");
+	if(fptr == NULL)
+	{
+		printf("File does not exist!\n");
+		return EXIT_FAILURE;
+	}
+	BMPImage* crop = crop_bmp(image,0,0,3,3,&error);
+	if(error != NULL)
+	{
+		printf("%s",error);
+		free(error);
+	}
+	if(write_bmp(fptr,crop,&error) == false)
+	{
+		if(error != NULL)
+		{
+			printf("%s",error);
+			free(error);
+		}
+	}
+	free_bmp(image);
+	free_bmp(crop);
+	fclose(fptr);
+	return EXIT_SUCCESS;
+}
