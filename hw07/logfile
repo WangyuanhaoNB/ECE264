@@ -1,0 +1,75 @@
+==2905== Memcheck, a memory error detector
+==2905== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==2905== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==2905== Command: ./test_shuffle
+==2905== Parent PID: 2904
+==2905== 
+--2905-- 
+--2905-- Valgrind options:
+--2905--    --tool=memcheck
+--2905--    --verbose
+--2905--    --log-file=./logfile
+--2905-- Contents of /proc/version:
+--2905--   Linux version 2.6.32-696.13.2.el6.x86_64 (mockbuild@x86-031.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-18) (GCC) ) #1 SMP Fri Sep 22 12:32:14 EDT 2017
+--2905-- Arch and hwcaps: AMD64, amd64-sse3-cx16
+--2905-- Page sizes: currently 4096, max supported 4096
+--2905-- Valgrind library directory: /usr/lib64/valgrind
+--2905-- Reading syms from /home/shay/a/wang3087/264/hw07/test_shuffle
+--2905-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--2905--    object doesn't have a dynamic symbol table
+--2905-- Reading syms from /lib64/ld-2.12.so
+--2905--   Considering /usr/lib/debug/.build-id/1c/c2165e019d43f71fde0a47af9f4c8eb5e51963.debug ..
+--2905--   .. build-id is valid
+--2905-- Scheduler: using generic scheduler lock implementation.
+--2905-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==2905== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-2905-by-wang3087-on-ecegrid-thin3.ecn.purdue.edu
+==2905== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-2905-by-wang3087-on-ecegrid-thin3.ecn.purdue.edu
+==2905== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-2905-by-wang3087-on-ecegrid-thin3.ecn.purdue.edu
+==2905== 
+==2905== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==2905== don't want to do, unless you know exactly what you're doing,
+==2905== or are doing some strange experiment):
+==2905==   /usr/lib64/valgrind/../../bin/vgdb --pid=2905 ...command...
+==2905== 
+==2905== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==2905==   /path/to/gdb ./test_shuffle
+==2905== and then give GDB the following command
+==2905==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=2905
+==2905== --pid is optional if only one valgrind process is running
+==2905== 
+--2905-- REDIR: 0x3e19e17f90 (strlen) redirected to 0x38049551 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--2905-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--2905-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+--2905-- REDIR: 0x3e19e17da0 (index) redirected to 0x4a07c30 (index)
+--2905-- REDIR: 0x3e19e17e20 (strcmp) redirected to 0x4a08570 (strcmp)
+--2905-- Reading syms from /lib64/libc-2.12.so
+--2905--   Considering /usr/lib/debug/.build-id/8a/7e7404a2335231be759cb54f8041344cac0c1b.debug ..
+--2905--   .. build-id is valid
+--2905-- REDIR: 0x3e1a284d10 (strcasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--2905-- REDIR: 0x3e1a286fd0 (strncasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--2905-- REDIR: 0x3e1a282c80 (__GI_strrchr) redirected to 0x4a07ab0 (__GI_strrchr)
+--2905-- REDIR: 0x3e1a28ab30 (strchrnul) redirected to 0x4a09fb0 (strchrnul)
+--2905-- REDIR: 0x3e1a27b8b0 (free) redirected to 0x4a063a9 (free)
+--2905-- REDIR: 0x3e1a27aa50 (malloc) redirected to 0x4a069ac (malloc)
+==2905== 
+==2905== HEAP SUMMARY:
+==2905==     in use at exit: 480 bytes in 8 blocks
+==2905==   total heap usage: 8 allocs, 0 frees, 480 bytes allocated
+==2905== 
+==2905== Searching for pointers to 8 not-freed blocks
+==2905== Checked 65,048 bytes
+==2905== 
+==2905== LEAK SUMMARY:
+==2905==    definitely lost: 480 bytes in 8 blocks
+==2905==    indirectly lost: 0 bytes in 0 blocks
+==2905==      possibly lost: 0 bytes in 0 blocks
+==2905==    still reachable: 0 bytes in 0 blocks
+==2905==         suppressed: 0 bytes in 0 blocks
+==2905== Rerun with --leak-check=full to see details of leaked memory
+==2905== 
+==2905== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+--2905-- 
+--2905-- used_suppression:      4 U1004-ARM-_dl_relocate_object
+--2905-- used_suppression:      4 glibc-2.5.x-on-SUSE-10.2-(PPC)-2a
+==2905== 
+==2905== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
